@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="main.css" />
+    <title>Book Shelf App</title>
+  </head>
+  <body>
+    <!-- MODAL -->
+    <div class="modalTambahBuku">
+      <form id="inputBuku">
+        <input type="text" id="inputJudulBuku" placeholder="Judul buku" />
+        <input type="text" id="inputPenulisBuku" placeholder="Penulis" />
+        <input type="number" id="inputTahunBuku" placeholder="Tahun" />
+        <div>
+          <input type="checkbox" id="inputBukuSelesaiDiBaca" />
+          <label for="inputBukuSelesaiDiBaca">Selesai di baca</label>
+        </div>
+        <button type="submit" id="btnTambahBukuModal">Tambah Buku</button>
+        <button type="submit" id="btnBatalTambahBukuModal">Batalkan</button>
+      </form>
+    </div>
+    <!-- HEADER -->
+    <header>
+      <h1>Bookshelf App</h1>
+
+      <div class="action">
+        <div>
+          <button type="submit" id="btnTambahBukuHeader">Tambah Buku</button>
+        </div>
+        <div class="btnCariBukuWrapper">
+          <input type="text" placeholder="Judul buku" />
+          <div>
+            <button type="submit" id="btnCariBukuHeader">Cari Buku</button>
+            <button type="submit" id="btnCari">Cari</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <ul>
+        <li class="listSemuaBuku active">Semua</li>
+        <li class="listBelumSelesaiDiBaca">Belum selesai di baca</li>
+        <li class="listSelesaiDiBaca">Selesai di baca</li>
+      </ul>
+
+      <div class="bookWrapper"></div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

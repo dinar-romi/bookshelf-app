@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --dark: #011627;
+  --light: #fdfffc;
+  --green: #2ec4b6;
+  --red: #e71d36;
+  --orange: #ff9f1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* modal tambah buku */
+.modalTambahBuku {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding-inline: 16px;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 10;
+}
+
+.modalTambahBuku #inputBuku {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid white;
+}
+
+.modalTambahBuku #inputBuku #inputJudulBuku,
+#inputPenulisBuku,
+#inputTahunBuku {
+  height: 42px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  outline: none;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.modalTambahBuku #inputBuku div {
+  display: flex;
+  gap: 16px;
+}
+
+.modalTambahBuku #inputBuku div label {
+  color: white;
+}
+
+.modalTambahBuku #inputBuku button#btnTambahBukuModal {
+  height: 42px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: var(--green);
+}
+.modalTambahBuku #inputBuku button#btnBatalTambahBukuModal {
+  height: 42px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: var(--red);
+}
+
+/* header*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  min-height: 20vh;
+  padding-block: 20px;
+  background-color: var(--green);
+}
+
+header h1 {
+  font-size: 32px;
+  font-style: italic;
+  line-height: 1;
+  color: white;
+}
+
+header .action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-inline: 32px;
+  width: 100%;
+}
+
+header .action > div {
+  width: 100%;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+header .action .btnCariBukuWrapper {
+  display: flex;
+  gap: 16px;
+  background-color: var(--dark);
+  border-radius: 10px;
+}
+
+header .action .btnCariBukuWrapper input {
+  display: none;
+  min-width: 80%;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+}
+
+header .action .btnCariBukuWrapper div {
+  width: 100%;
+  position: relative;
+}
+
+header .action .btnCariBukuWrapper div #btnCariBukuHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header .action .btnCariBukuWrapper div #btnCari {
+  background-color: var(--orange);
+}
+
+header button {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--light);
+  border: none;
+  border-radius: 10px;
+  background-color: var(--dark);
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: var(--orange);
+}
+
+/* main */
+main {
+  padding: 64px 32px;
+  background-color: var(--dark);
+  min-height: 100vh;
+}
+
+main ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+main ul li {
+  list-style: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+main ul li.active {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+main .bookWrapper {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  padding: 16px;
+  border: 1px solid white;
+  border-radius: 18px;
+}
+
+main .bookWrapper article {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+main .bookWrapper article .image-wrapper {
+  display: flex;
+}
+
+main .bookWrapper article .image-wrapper img {
+  height: 100%;
+  margin-left: -10px;
+}
+
+main .bookWrapper article .text-content-book {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .bookWrapper article .text-content-book h3 {
+  text-transform: capitalize;
+}
+
+main .bookWrapper article .text-content-book h3,
+p {
+  color: white;
+}
+
+main .bookWrapper article .text-content-book .action .green {
+  padding: 6px 12px;
+  color: white;
+  background-color: var(--green);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+main .bookWrapper article .text-content-book .action .red {
+  padding: 6px 12px;
+  color: white;
+  background-color: var(--red);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* MEDIUM SCREEN------------------ */
+@media screen and (min-width: 720px) {
+  .modalTambahBuku {
+    padding-inline: 64px;
+  }
+
+  header .action {
+    padding-inline: 64px;
+  }
+
+  main {
+    padding: 64px;
+  }
+
+  main .bookWrapper article {
+    flex-direction: row;
+  }
+}
+
+/* LARGE SCREEN------------------ */
+@media screen and (min-width: 1024px) {
+  .modalTambahBuku {
+    padding-inline: 256px;
+  }
+
+  header h1 {
+    font-size: 42px;
+  }
+
+  header .action {
+    flex-direction: row;
+    padding-inline: 200px;
+  }
+
+  main {
+    padding: 64px 200px;
+  }
+
+  main ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 64px;
+  }
+}
+
+/* XTRA LARGE SCREEN------------------ */
+@media screen and (min-width: 1440px) {
+  .modalTambahBuku {
+    padding-inline: 512px;
+  }
+
+  header .action {
+    padding-inline: 400px;
+  }
+
+  main .bookWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
