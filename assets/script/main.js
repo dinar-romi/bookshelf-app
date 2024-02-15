@@ -62,7 +62,7 @@ const renderBook = (booksToRender) => {
   const listSelesaiDiBaca = document.querySelector(".listSelesaiDiBaca");
 
   const renderSingleBook = (book) => {
-    const bookImage = book.isComplite ? "./assets/green-book.png" : "./assets/yellow-book.png";
+    const bookImage = book.isComplite ? "./assets/img/green-book.png" : "./assets/img/yellow-book.png";
     const btnPindahBuku = book.isComplite ? "Belum selesai di baca" : "Selesai di baca";
 
     return `
